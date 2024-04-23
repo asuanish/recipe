@@ -92,11 +92,63 @@ nav ul li:last-child {
   grid-row-end: 2;
 }
 
+#searchInput {
+  grid-row: 2;
+  background-color: #f2f2f2;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-content: center;
+  padding: 15px;
+}
+
+#searchInput input,
+#searchInput button {
+  height: 50px;
+  margin: 0;
+}
+
+#searchInput input {
+  width: 300px;
+  grid-row: 1;
+  border: 2px solid #eb5428;
+}
+
+#searchInput button {
+  grid-row: 1;
+  background-color: #eb5428;
+  border: 2px solid #eb5428;
+}
+
+h1 {
+  margin-top: 200px;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+main {
+  background-color: #f2f2f2;
+  margin: 0;
+  display: block;
+}
+
+menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  text-align: center;
+  color: #eb5428;
+}
+
+#tacos {
+  width: 414px;
+}
+
 @media screen and (min-width: 768px) {
   body,
   nav ul,
-  menu,
-  [src*="street-tacos"] {
+  menu {
     width: 768px;
   }
 
@@ -128,6 +180,19 @@ nav ul li:last-child {
 
   nav ul img {
     width: 60px;
+  }
+
+  #searchInput {
+    grid-row: 1;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    right: 160px;
+  }
+
+  h1 {
+    text-align: left;
+    padding-top: 50px;
   }
 }
 
@@ -163,5 +228,12 @@ nav ul li:last-child {
     grid-column: 11;
     grid-row: 1;
     width: 68px;
+  }
+
+  #searchInput {
+    grid-row: 2;
+    position: static;
+    background-color: #f2f2f2;
+    padding-top: 50px;
   }
 }
