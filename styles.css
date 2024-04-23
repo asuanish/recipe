@@ -2,10 +2,38 @@ html {
   background-color: rgba(122, 191, 191, 0.5);
 }
 
+h1,
+h2,
+h3,
+nav a,
+nav span,
+menu li,
+#social li,
+footer {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+p,
+dd,
+li,
+nav,
+input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+dt {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
   margin: 0 auto;
   width: 414px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
