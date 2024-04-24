@@ -95,12 +95,21 @@ nav #dropdown {
 }
 
 #details dl {
-  margin: 0 5px;
-  line-height: 2;
+  margin: 0 10px;
+  line-height: 1.5;
 }
 
 #details dd {
   display: inline;
+}
+
+#details dd:after {
+  display: block;
+  content: "";
+}
+
+#details dt {
+  display: inline-block;
 }
 
 #sDishes {
@@ -278,6 +287,14 @@ footer img {
     width: 768px;
   }
 
+  #details {
+    text-align: center;
+  }
+
+  #details dd {
+    margin: 10px;
+  }
+
   nav ul {
     height: 200px;
   }
@@ -354,7 +371,7 @@ footer img {
   }
 
   #tacos {
-    height: 400px;
+    height: 600px;
     width: 600px;
   }
 
@@ -447,6 +464,32 @@ footer img {
     width: 68px;
     grid-column: 11;
     grid-row: 1;
+  }
+
+  #details {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: black;
+    color: #7abfbf;
+  }
+
+  #details h2 {
+    padding-bottom: 10px;
+  }
+
+  #details dl {
+    display: grid;
+    grid-template-rows: 20px 20px;
+  }
+
+  #details dt {
+    grid-row: 1;
+  }
+
+  #details dd {
+    grid-row: 2;
+    margin: 0;
   }
 
   #sDishes {
