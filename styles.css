@@ -522,24 +522,60 @@ footer img {
 
   #sDishes {
     display: grid;
-    height: 400px;
     grid-column-start: 1;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30px 1fr;
     grid-column-end: 5;
+    grid-row: 4;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 40px 1fr;
+    height: 400px;
   }
 
   #sDishes h2 {
-    margin: 0;
-    grid-column-start: 1;
+    margin: auto;
     grid-row: 1;
+    grid-column-start: 1;
     grid-column-end: 5;
   }
 
   #sDishes figure {
     margin: auto;
-    grid-template-areas: "img" "figcap" "desc" "rating";
-    grid-template-rows: 200px 30px 30px 30px;
-    grid-template-columns: 200px;
+    width: fit-content;
+    grid-template-areas:
+      "img"
+      "figcap"
+      "desc"
+      "rating";
+    grid-template-columns: 250px;
+    grid-template-rows: 250px 35px 35px 35px;
+  }
+
+  #sDishes figure img {
+    width: 250px;
+    grid-area: img;
+  }
+
+  #sDishes figure figcaption {
+    grid-area: figcap;
+  }
+
+  #sDishes figure p {
+    grid-area: desc;
+  }
+
+  #sDishes figure dl {
+    grid-area: rating;
+  }
+
+  #sDishes figure dl dd {
+    display: inline;
+  }
+
+  #sDishes figure dl:after {
+    display: block;
+    content: "";
+  }
+
+  #sDishes figure dl dt {
+    display: inline-block;
   }
 }
