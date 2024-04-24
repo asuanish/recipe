@@ -31,6 +31,11 @@ dt {
   font-style: normal;
 }
 
+header {
+  position: absolute;
+  top: 0;
+}
+
 h1 {
   font-size: 30px;
   margin: auto;
@@ -53,11 +58,6 @@ body {
   margin: 0 auto;
   width: 414px;
   background-color: white;
-}
-
-header {
-  position: absolute;
-  top: 0;
 }
 
 nav {
@@ -110,7 +110,7 @@ nav #dropdown {
 }
 
 #sDishes figcaption {
-  grid: b;
+  grid-area: b;
 }
 
 #sDishes p {
@@ -190,7 +190,7 @@ nav ul li:last-child {
 
 #searchInput {
   grid-row: 2;
-  background-color: #white;
+  background-color: #f2f2f2;
   text-align: center;
   display: grid;
   grid-template-rows: 1fr;
@@ -217,7 +217,7 @@ nav ul li:last-child {
 }
 
 main {
-  background-color: #white;
+  background-color: #f2f2f2;
   margin: 0;
   display: block;
 }
@@ -310,6 +310,21 @@ footer img {
     background-color: white;
     right: 120px;
   }
+
+  #sDishes {
+    grid-area: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  #sDishes figure {
+    width: 50%;
+  }
+
+  #sDishes h2 {
+    margin: 0;
+    width: 768px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -319,9 +334,27 @@ footer img {
     padding-top: 50px;
   }
 
+  body {
+    height: 1700px;
+  }
+
   body,
   nav ul {
     width: 1280px;
+  }
+
+  menu {
+    width: 100px;
+    height: 750px;
+    display: inline-block;
+    flex-direction: column;
+    position: relative;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    width: 1280px;
+    text-align: center;
   }
 
   nav {
@@ -352,10 +385,70 @@ footer img {
     width: 68px;
   }
 
+  footer {
+    display: grid;
+    position: relative;
+    background-color: #f2f2f2;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100px 1fr 1fr;
+  }
+
+  footer img {
+    width: 100px;
+    grid-column: 1;
+  }
+
+  footer small {
+    text-align: left;
+    grid-row: 1;
+    grid-column: 2;
+  }
+
   #searchInput {
     grid-row: 2;
     position: static;
     padding-top: 50px;
-    background-color: #white;
+    background-color: #f2f2f2;
+  }
+
+  nav ul li:first-child {
+    visibility: hidden;
+    grid-column: 2;
+  }
+
+  nav ul li:first-child + li {
+    width: 110px;
+    grid-row: 1;
+    grid-column: 1;
+    background-color: #eb5428;
+  }
+
+  nav ul li:last-child {
+    width: 68px;
+    grid-column: 11;
+    grid-row: 1;
+  }
+
+  #sDishes {
+    display: grid;
+    height: 400px;
+    grid-column-start: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 1fr;
+    grid-column-end: 5;
+  }
+
+  #sDishes h2 {
+    margin: 0;
+    grid-column-start: 1;
+    grid-row: 1;
+    grid-column-end: 5;
+  }
+
+  #sDishes figure {
+    margin: auto;
+    grid-template-areas: "img" "figcap" "desc" "rating";
+    grid-template-rows: 200px 30px 30px 30px;
+    grid-template-columns: 200px;
   }
 }
